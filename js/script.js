@@ -56,17 +56,27 @@ createApp({
         //MOSTRO IMMAGINE DELLA THUMBNAIL CLICCATA 
         showImage: function(clickedImage) {
             this.activeImage = clickedImage;
-        }
+        },
+
+        //START AUTOPLAY DI 3 SECONDI
+        startAutoplay() {
+           clock = setInterval(this.nextImage,3000);
+        },
+        
+        //STOP AUTOPLAY
+        stopAutoplay() {
+            clearInterval(clock);
+        },       
     },
     mounted(){
-        setInterval(this.nextImage,3000);
+        this.startAutoplay()
+            
     }
     
 }).mount('#app');
 
 
 // Bonus:
-// 2- applicare l'autoplay allo slider: ogni 3 secondi, 
-// cambia immagine automaticamente
+
 // 3- quando il mouse va in hover sullo slider, 
 // bloccare l'autoplay e farlo riprendere quando esce
