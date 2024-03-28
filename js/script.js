@@ -33,8 +33,10 @@ createApp({
             activeImage: 0
         };
     },
+
     
     methods: {
+        //SHOW NEXT IMAGE
         nextImage: function() {         
             if (this.activeImage < this.slides.length - 1) {
                 this.activeImage++;
@@ -42,7 +44,7 @@ createApp({
                 this.activeImage = 0;
             }
         },
-
+        //SHOW PREV IMAGE
         prevImage: function() {
             if (this.activeImage > 0) {
                 this.activeImage--;
