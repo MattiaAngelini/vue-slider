@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs" @mouseenter="stopAutoplay">
+                <div class="thumbs" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
 
                     <div class="prev" @click="prevImage"></div> <!--prevImage-->
                     <div class="next" @click="nextImage"></div>  <!--nextimage--> 
